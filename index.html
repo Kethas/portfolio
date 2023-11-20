@@ -30,15 +30,16 @@
 
         <!-- Background from https://codepen.io/H2xDev/pen/ymJqZv -->
         <!-- Credit to Radik https://codepen.io/H2xDev -->
-        <script>
+        <script defer>
             function addCanvas() {
                 if (!document.body) {
                     console.error("Body does not exist!!!");
                 }
 
-                const container = document.body.appendChild(document.createElement('div'));
+                const container = document.createElement('div');
                 container.classList.add("canvas-container");
                 const c = container.appendChild(document.createElement('canvas')).getContext('2d');
+                document.body.appendChild(container);
                 const { canvas } = c
 
                 const points = []
