@@ -38,7 +38,7 @@ impl Component for App {
 
         html! {
             <>
-                <main class="flex-column">
+                <main id="main" class="flex-column">
                     {for projects}
                 </main>
 

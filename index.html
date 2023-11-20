@@ -165,7 +165,7 @@
             
             function checkBodyStatus() {
                 console.log("Checking body status")
-                if (document.body && document.body.childNodes.length > 0) {
+                if (document.body && document.body.childNodes.length > 0 && document.getElementById("main")) {
                     console.log("Body exists!", document.body);
                     setTimeout(addCanvas, 100);
                     console.log("Body exists!", document.body);
