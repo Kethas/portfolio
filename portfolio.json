@@ -1,0 +1,36 @@
+{
+    "projects": [
+        {
+            "title": "CV",
+            "description": "A responsive, animated webpage of my CV.\nProgrammed in Rust, HTML, CSS, and JavaScript.",
+            "images": [
+                {
+                    "src": "https://raw.githubusercontent.com/Kethas/cv/main/screenshot.png"
+                },
+                {
+                    "src": "https://raw.githubusercontent.com/Kethas/cv/main/screenshot.png"
+                }
+            ],
+            "status": "Stable",
+            "links": [
+                {
+                    "href": "https://cv.asphyx.dev",
+                    "display": "cv.asphyx.dev",
+                    "icon": "Chain"
+                },
+                {
+                    "href": "https://github.com/Kethas/cv",
+                    "display": "Source Code",
+                    "icon": "GitHub"
+                }
+            ]
+        },
+        {
+            "title": "Moinkroft",
+            "description": "A Minecraft clone made with Rust + WGPU.",
+            "images": [],
+            "status": "Wip",
+            "links": []
+        }
+    ]
+}

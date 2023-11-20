@@ -1,0 +1,231 @@
+html {
+    font-size: 1rem;
+    font-family: 'Bitter', serif;
+    background-color: #000;
+    z-index: -100;
+    color: lightgray;
+    overflow: hidden;   
+
+    height: 100%;
+
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 100%;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.flex-column {
+    padding-top: 20rem;
+    padding-bottom: 30rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30rem;
+}
+
+
+.centered {
+    display: flex;
+    justify-content: center;
+
+    scroll-snap-align: center;
+}
+
+
+.project-card {
+    display: block;
+    background-color: #3737371F;
+    backdrop-filter: blur(10px);
+    border: 0.2rem solid #111;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.3rem black;
+
+    padding: 1rem;
+
+    width: 50%;
+
+
+
+
+
+
+    .title {
+        font-size: 2rem;
+    }
+
+    p {
+        white-space: preserve;
+    }
+
+    $status-font-size: 1.3rem;
+    $indicator-size: 0.4rem;
+
+    .status {
+        float: right;
+        font-size: $status-font-size;
+        vertical-align: middle;
+    }
+
+    .indicator.wip {
+        display: inline-block;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: #DD2233;  
+        border: 1px solid darken(#DD2233,5%);
+        border-radius: 50%;
+
+
+        font-size: 1.5rem;
+        margin-right: 0.2rem;
+        margin-bottom: calc($status-font-size / 2 - $indicator-size * 1.25);
+
+        color: #DD2233;
+        box-shadow: 0 0 1rem #DD2233;
+    }
+
+    .indicator.working {
+        display: inline-block;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: #DDAA11;  
+        border: 1px solid darken(#DDAA11,5%);
+        border-radius: 50%;
+
+
+        font-size: 1.5rem;
+        margin-right: 0.2rem;
+        margin-bottom: calc($status-font-size / 2 - $indicator-size * 1.25);
+
+        color: #DDAA11;
+        box-shadow: 0 0 1rem #DDAA11;
+    }
+
+    .indicator.stable {
+        display: inline-block;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: #33DD22;  
+        border: 1px solid darken(#33DD22,5%);
+        border-radius: 50%;
+
+
+        font-size: 1.5rem;
+        margin-right: 0.2rem;
+        margin-bottom: calc($status-font-size / 2 - $indicator-size * 1.25);
+
+        color: #33DD22;
+        box-shadow: 0 0 1rem #33DD22;
+    }
+
+
+    .-hover-out {
+        animation: forwards 0.1s ease-in-out shadow-animation-out;
+    }
+
+    .carousel-container {
+        margin: 1rem;
+        //border: 0.1rem solid black;
+        border-radius: 0.3rem;
+        user-select: none;
+
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 0.3rem;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .carousel-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            margin: 0.2rem;
+
+            .carousel-button {
+                width: 3rem;
+                text-align: center;
+                border: 0.1rem solid black;
+                border-radius: 0.3rem;
+
+                cursor: pointer;
+            }
+            .carousel-button:hover {
+                animation: both 0.1s ease-in-out shadow-animation-in;
+
+            }
+
+            .carousel-progress {
+                cursor: default;
+            }
+        }
+    }
+
+    .links {
+        float: right;
+
+        a, a:visited{
+            text-decoration: none;
+            color: lightgray;
+        }
+
+        .link {
+            display: inline-flex;
+            gap: 0.1rem;
+            padding: 0.1rem;
+            border: 0.05rem solid black;
+            border-radius: 0.2rem;
+            margin: 0.2rem;
+
+            img {
+                filter: contrast(1.5) invert(90%);
+                width: auto;
+                max-height: 1rem;
+                margin: 0.1rem;
+            }
+        }
+
+        .link:hover {
+            animation: forwards 0.1s ease-in-out shadow-animation-in;
+        }
+
+        @keyframes shadow-animation-in {
+            from {
+                box-shadow: 0 0 0 gray;
+            }
+            to {
+                box-shadow: 0 0 1rem gray;
+            }
+        }
+
+        @keyframes shadow-animation-out {
+            from {
+                box-shadow: 0 0 1rem gray;
+            }
+            to {
+                box-shadow: 0 0 0 gray;
+            }
+        }
+
+        
+    }
+}
