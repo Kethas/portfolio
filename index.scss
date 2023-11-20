@@ -26,11 +26,24 @@ body {
     scrollbar-width: none;  /* Firefox */
 }
 
-canvas {
+.canvas-container {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    animation: forwards ease-in canvas-animation 1s;
+}
+
+@keyframes canvas-animation {
+    from {
+        opacity: 30%;
+        filter: blur(20px);
+    }
+
+    to {
+        opacity: 100%;
+        filter: unset;
+    }
 }
 
 .flex-column {

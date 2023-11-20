@@ -36,7 +36,9 @@
                     console.error("Body does not exist!!!");
                 }
 
-                const c = document.body.appendChild(document.createElement('canvas')).getContext('2d')
+                const container = document.body.appendChild(document.createElement('div'));
+                container.classList.add("canvas-container");
+                const c = container.appendChild(document.createElement('canvas')).getContext('2d');
                 const { canvas } = c
 
                 const points = []
@@ -160,17 +162,16 @@
                 
             };
             
-            let intervalId;
             function checkBodyStatus() {
                 console.log("Checking body status")
                 if (document.body) {
                     console.log("Body exists!", document.body);
-                    clearInterval(intervalId);
-                    setTimeout(addCanvas, 10);
+                    addCanvas();
                     console.log("Body exists!", document.body);
                 }
             }
-            intervalId = setInterval(checkBodyStatus, 50);
+
+            setTimeout(checkBodyStatus, 100);
         </script>
     </head>
 </html>
