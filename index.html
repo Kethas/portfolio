@@ -164,14 +164,16 @@
             
             function checkBodyStatus() {
                 console.log("Checking body status")
-                if (document.body) {
+                if (document.body && document.body.childNodes.length > 0) {
                     console.log("Body exists!", document.body);
-                    addCanvas();
+                    setTimeout(addCanvas, 100);
                     console.log("Body exists!", document.body);
+                } else {
+                    setTimeout(checkBodyStatus, 50);
                 }
             }
 
-            setTimeout(checkBodyStatus, 100);
+            document.addEventListener("DOMContentLoaded", checkBodyStatus)
         </script>
     </head>
 </html>
