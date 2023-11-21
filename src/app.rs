@@ -1,3 +1,5 @@
+use std::fmt::format;
+
 use crate::portfolio::{self, *};
 use yew::{prelude::*, props};
 
@@ -20,6 +22,8 @@ impl Component for App {
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
+        let n_projects = self.portfolio.projects.len();
+
         let projects = self.portfolio.projects.iter().enumerate().map(|(n, p)| {
             let props = props! { ProjectProps { id: n, project: p.clone() } };
             html! {
@@ -36,28 +40,36 @@ impl Component for App {
                 </main>
 
 
-                //<Scrollbar />
+                <Scrollbar {n_projects} />
             </>
         }
     }
 }
 
-/*
 #[derive(Properties, PartialEq)]
 struct ScrollbarProps {
-    scroll_sections: Vec<String>,
-    selected_section: usize,
+    n_projects: usize,
 }
 
 #[function_component(Scrollbar)]
 fn scrollbar(props: &ScrollbarProps) -> Html {
-    html! {
-        <div id="scrollbar">
+    let indicators = (0..props.n_projects).map(|n| {
+        let class = format!("scroll-indicator {}", if n == 0 { "on" } else { "off" });
+        html! {
+            <a class="indicator-container" href={format!("#project-{n}")}>
+                <div id={format!("scroll-indicator-{n}")} {class} />
+            </a>
+        }
+    });
 
+    html! {
+        <div class="scrollbar">
+            <div class="indicators">
+                {for indicators}
+            </div>
         </div>
     }
 }
-*/
 
 #[derive(Properties, PartialEq)]
 struct ProjectProps {
@@ -91,7 +103,7 @@ fn project(props: &ProjectProps) -> Html {
     };
 
     html! {
-        <div class="project-card">
+        <div id={format!("project-{}", props.id)} class="project-card">
             <div>
                 <span class="title">{ &props.project.title }</span>
                 <span class="status">

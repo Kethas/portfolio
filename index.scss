@@ -53,7 +53,7 @@ canvas {
     }
 }
 
-// mobile styles
+// mobile only styles
 @media only screen and (max-width: 768px) {
     .flex-column {
         padding-top: 0 !important;
@@ -61,8 +61,153 @@ canvas {
     .project-card {
         width: 80% !important;
     }
+
+    .scrollbar {
+        position: absolute;
+        left: 0;
+        bottom: 2.5vw;
+        width: 100vw;
+        height: 5vh;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        .indicators {
+            padding: 0.5rem 1rem;
+            height: 1rem;
+            flex-direction: row;
+        }
+        
+        .indicator-container {
+            flex-direction: column;
+        }
+    }
 }
 
+// desktop only styles
+@media only screen and (min-width: 768px) {
+    .scrollbar {
+        position: absolute;
+        top: 0;
+        left: 2.5vw;
+        height: 100vh;
+        width: 5vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .indicators {
+            padding: 2rem 0.5rem;
+            flex-direction: column;
+        }
+
+        
+    }
+}
+
+.scrollbar {
+    z-index: 100;
+
+    .indicators {
+        background-color: #3737371F;
+        backdrop-filter: blur(10px);
+        border: 0.1rem solid #111;
+        border-radius: 1rem;
+        box-shadow: 0 0 0.3rem black;
+
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+
+        .indicator-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .scroll-indicator {
+            display: inline-block;
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+
+            text-align: center;
+
+            font-size: 1.5rem;
+
+        }
+
+        .scroll-indicator.off {
+            display: inline-block;
+            width: 0.4rem;
+            height: 0.4rem;
+            background: #575757;  
+            border: 1px solid darken(#575757,5%);
+            border-radius: 50%;
+
+            text-align: center;
+
+            font-size: 1.5rem;
+
+            color: #575757;
+            box-shadow: 0 0 0 #00ad68;
+        }
+
+        .scroll-indicator.on {
+            display: inline-block;
+            width: 0.4rem;
+            height: 0.4rem;
+            background: #00ad68;  
+            border: 1px solid darken(#00ad68,5%);
+            border-radius: 50%;
+
+            text-align: center;
+
+            font-size: 1.5rem;
+
+            color: #00ad68;
+            box-shadow: 0 0 1rem #00ad68;
+        }
+
+        .anim-on {
+            animation: forwards ease-in-out 0.4s turn-indicator-on;
+        }
+        .anim-off {
+            animation: forwards ease-in-out 0.3s turn-indicator-off;
+        }
+
+        @keyframes turn-indicator-on {
+            from {
+                color: #575757;
+                background: #575757;  
+                border: 1px solid darken(#575757,5%);
+                box-shadow: 0 0 0 #00ad68;
+            }
+            to {
+                color: #00ad68;
+                background: #00ad68;  
+                border: 1px solid darken(#00ad68,5%);
+                box-shadow: 0 0 1rem #00ad68;
+            }
+        }
+
+        @keyframes turn-indicator-off {
+            from {
+                color: #00ad68;
+                background: #00ad68;  
+                border: 1px solid darken(#00ad68,5%);
+                box-shadow: 0 0 1rem #00ad68;
+            }
+            to {
+                color: #575757;
+                background: #575757;  
+                border: 1px solid darken(#575757,5%);
+                box-shadow: 0 0 0 #00ad68;
+            }
+        }
+    }
+}
 
 .flex-column {
     padding-top: 20rem;
@@ -82,6 +227,7 @@ canvas {
 
     padding: 10em 0;
 }
+
 
 
 .project-card {

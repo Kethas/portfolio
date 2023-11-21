@@ -17,20 +17,56 @@
         <link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet'>
         
-        <script>
-            setTimeout(() => {
+        <script defer>
+            // Link & Button hover animations
+            function setHoverAnims() {
                 for (let elem of document.getElementsByClassName("hover-out")) {
                     elem.addEventListener("mouseleave", function(ev) {
                         this.classList.remove("-hover-out");
                         this.classList.add("-hover-out");
                     });
                 }
-            }, 200);
-        </script>
+            };
 
-        <!-- Background from https://codepen.io/H2xDev/pen/ymJqZv -->
-        <!-- Credit to Radik https://codepen.io/H2xDev -->
-        <script defer>
+            // Scrollbar intersection observer
+            let lastId = null;
+            function scrollbarIntersectionObserver() {
+                let observer = new IntersectionObserver((entries) => {
+                    for (let entry of entries) {
+                        if (entry.isIntersecting) {
+                            let regex = /^project-([0-9]+)$/g;
+                            let id = regex.exec(entry.target.id)[1];
+
+                            if (lastId) {
+                                let lastIndicatorId = "scroll-indicator-" + lastId;
+                                let lastIndicator = document.getElementById(lastIndicatorId);
+                                if (!lastIndicator.classList.contains("off")) {
+                                    lastIndicator.classList.remove("anim-on", "on");
+                                    lastIndicator.classList.add("anim-off");
+                                }
+
+                            }
+
+                            let indicatorId = "scroll-indicator-" + id;
+                            let indicator = document.getElementById(indicatorId);
+                            if (!indicator.classList.contains("on")) {
+                                indicator.classList.remove("anim-off", "off");
+                                indicator.classList.add("anim-on");
+                            }
+        
+
+                            lastId = id;
+                        }
+                    }
+                });
+
+                for (let proj of document.getElementsByClassName("project-card")) {
+                    observer.observe(proj);
+                }
+            }
+
+            // Background from https://codepen.io/H2xDev/pen/ymJqZv
+            // Credit to Radik https://codepen.io/H2xDev
             function addCanvas() {
                 if (!document.body) {
                     console.error("Body does not exist!!!");
@@ -166,11 +202,12 @@
             };
             
             function checkBodyStatus() {
-                console.log("Checking body status")
                 if (document.body && document.body.childNodes.length > 0 && document.getElementById("main")) {
-                    console.log("Body exists!", document.body);
-                    setTimeout(addCanvas, 100);
-                    console.log("Body exists!", document.body);
+                    setTimeout(() => {
+                        setHoverAnims();
+                        scrollbarIntersectionObserver();
+                        addCanvas();
+                    }, 100);
                 } else {
                     setTimeout(checkBodyStatus, 50);
                 }
