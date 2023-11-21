@@ -32,6 +32,12 @@ body {
     left: 0;
     z-index: -1;
     animation: forwards ease-in canvas-animation 1s;
+
+    pointer-events: none;
+}
+
+canvas {
+    pointer-events: none;
 }
 
 @keyframes canvas-animation {
