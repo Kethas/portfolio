@@ -34,8 +34,11 @@
                 let observer = new IntersectionObserver((entries) => {
                     for (let entry of entries) {
                         if (entry.isIntersecting) {
+                            let proj = entry.target.children[0];
+                            proj.classList.add("fly-in");
+
                             let regex = /^project-([0-9]+)$/g;
-                            let id = regex.exec(entry.target.id)[1];
+                            let id = regex.exec(proj.id)[1];
 
                             if (lastId) {
                                 let lastIndicatorId = "scroll-indicator-" + lastId;
@@ -60,7 +63,7 @@
                     }
                 });
 
-                for (let proj of document.getElementsByClassName("project-card")) {
+                for (let proj of document.getElementsByClassName("project-container")) {
                     observer.observe(proj);
                 }
             }
@@ -214,6 +217,8 @@
             }
 
             document.addEventListener("DOMContentLoaded", checkBodyStatus)
+
+            
         </script>
     </head>
 </html>

@@ -20,7 +20,9 @@ body {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 100%;
+    width: 100%;
 
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -75,6 +77,8 @@ canvas {
             min-height: 1rem;
             flex-direction: row;
             max-width: 80%;
+
+            row-gap: 1rem !important;
         }
         
         .indicator-container {
@@ -238,6 +242,28 @@ canvas {
 }
 
 
+.project-container {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+@keyframes fly-in {
+    from {
+        transform: translateX(100vw);
+        opacity: 50%;
+    }
+    to {
+        transform: none;
+        opacity: 100%;
+    }
+}
+
+.fly-in {
+    animation: forwards ease-in-out 1s fly-in;
+}
 
 .project-card {
     display: block;
@@ -251,7 +277,8 @@ canvas {
 
     width: 60%;
 
-
+    transform: translateX(100vw);
+    opacity: 50%;
 
 
 

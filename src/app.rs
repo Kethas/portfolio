@@ -26,7 +26,9 @@ impl Component for App {
             let props = props! { ProjectProps { id: n, project: p.clone() } };
             html! {
                 <div class="centered">
-                    <Project ..props />
+                    <div id={format!("project-{n}")} class="project-container">
+                        <Project ..props />
+                    </div>
                 </div>
             }
         });
