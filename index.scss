@@ -24,6 +24,7 @@ body {
 
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    -webkit-overflow-scrolling: touch;
 }
 
 .canvas-container {
@@ -54,6 +55,9 @@ canvas {
 
 // mobile styles
 @media only screen and (max-width: 768px) {
+    .flex-column {
+        padding-top: 0 !important;
+    }
     .project-card {
         width: 80% !important;
     }
@@ -76,7 +80,7 @@ canvas {
 
     scroll-snap-align: center;
 
-    padding: 2.5rem 0;
+    padding: 10em 0;
 }
 
 
