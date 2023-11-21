@@ -46,6 +46,14 @@ body {
     }
 }
 
+// mobile styles
+@media only screen and (max-width: 768px) {
+    .project-card {
+        width: 80% !important;
+    }
+}
+
+
 .flex-column {
     padding-top: 20rem;
     padding-bottom: 30rem;
@@ -61,6 +69,8 @@ body {
     justify-content: center;
 
     scroll-snap-align: center;
+
+    padding: 2.5rem 0;
 }
 
 
@@ -74,7 +84,7 @@ body {
 
     padding: 1rem;
 
-    width: 50%;
+    width: 60%;
 
 
 

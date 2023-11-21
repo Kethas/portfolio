@@ -36,6 +36,8 @@
                     console.error("Body does not exist!!!");
                 }
 
+                let isMobile = window.innerWidth <= 768;
+
                 const container = document.createElement('div');
                 container.classList.add("canvas-container");
                 const c = container.appendChild(document.createElement('canvas')).getContext('2d');
@@ -45,7 +47,7 @@
                 const points = []
 
                 // Properties
-                const pointsCount = 100
+                const pointsCount = isMobile ? 50 : 100
                 const pointRadius = 1
                 const pointVelocity = 0.5
                 const maxDistBetweenPoint = 150

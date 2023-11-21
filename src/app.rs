@@ -1,5 +1,5 @@
 use crate::portfolio::{self, *};
-use yew::{html::IntoPropValue, prelude::*, props};
+use yew::{prelude::*, props};
 
 pub struct App {
     portfolio: Portfolio,
@@ -20,13 +20,6 @@ impl Component for App {
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
-        let scroll_sections = self
-            .portfolio
-            .projects
-            .iter()
-            .map(|p| p.title.clone())
-            .collect::<Vec<_>>();
-
         let projects = self.portfolio.projects.iter().enumerate().map(|(n, p)| {
             let props = props! { ProjectProps { id: n, project: p.clone() } };
             html! {
@@ -135,7 +128,7 @@ impl Component for ImageCarousel {
 
     type Properties = ImageCarouselProps;
 
-    fn create(ctx: &Context<Self>) -> Self {
+    fn create(_ctx: &Context<Self>) -> Self {
         ImageCarousel { current_img: 0 }
     }
 
