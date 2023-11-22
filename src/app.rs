@@ -1,5 +1,11 @@
+use std::path::PathBuf;
+
 use crate::portfolio::{self, *};
+use include_dir::{include_dir, Dir};
+use serde_json::from_str;
 use yew::{prelude::*, props};
+
+static TXT_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/txt");
 
 pub struct App {
     portfolio: Portfolio,
@@ -23,7 +29,10 @@ impl Component for App {
         let n_projects = self.portfolio.projects.len();
 
         let projects = self.portfolio.projects.iter().enumerate().map(|(n, p)| {
-            let props = props! { ProjectProps { id: n, project: p.clone() } };
+            let is_last_project = n == n_projects - 1;
+
+            let props = props! { ProjectProps { id: n, project: p.clone(), is_last_project } };
+
             html! {
                 <div class="centered">
                     <div id={format!("project-{n}")} class="project-container">
@@ -37,7 +46,14 @@ impl Component for App {
             <>
                 <main id="main" class="flex-column">
                     {for projects}
+
+                    <div class="centered" style="scroll-snap-align: none;">
+                        <div id="animation-corrector" class="project-container">
+                            <div class="project-card" />
+                        </div>
+                    </div>
                 </main>
+
 
 
                 <Scrollbar {n_projects} />
@@ -75,6 +91,7 @@ fn scrollbar(props: &ScrollbarProps) -> Html {
 struct ProjectProps {
     id: usize,
     project: portfolio::Project,
+    is_last_project: bool,
 }
 
 #[function_component(Project)]
@@ -102,8 +119,25 @@ fn project(props: &ProjectProps) -> Html {
         html! {}
     };
 
+    // if the first char is @, the rest of the string is a path to where the description is.
+    let mut chars = props.project.description.chars();
+    let description = if chars.next() == Some('@') {
+        let path = chars.collect::<String>();
+
+        TXT_DIR
+            .get_file(path)
+            .map(|f| {
+                f.contents_utf8()
+                    .unwrap_or("Could not read file.")
+                    .to_owned()
+            })
+            .unwrap_or("Could not read file.".to_owned())
+    } else {
+        props.project.description.clone()
+    };
+
     html! {
-        <div id={format!("project-{}", props.id)} class="project-card">
+        <div data-id={format!("project-{}", props.id)} class="project-card">
             <div>
                 <span class="title">{ &props.project.title }</span>
                 <span class="status">
@@ -113,7 +147,7 @@ fn project(props: &ProjectProps) -> Html {
 
             { carousel }
 
-            <p>{ &props.project.description }</p>
+            <p>{ description }</p>
             <div class="links">
                 { for links }
             </div>

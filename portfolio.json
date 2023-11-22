@@ -2,11 +2,8 @@
     "projects": [
         {
             "title": "CV",
-            "description": "A responsive, animated webpage of my CV.\nProgrammed in Rust, HTML, CSS, and JavaScript.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis, enim in condimentum ullamcorper, mauris justo suscipit ipsum, ut facilisis lacus felis sit amet purus. Sed at eros dolor. Donec gravida diam non finibus lacinia. Aliquam vitae tempor felis. Fusce sed urna eu risus vestibulum pharetra non at eros. Suspendisse lobortis risus ac felis pulvinar facilisis. Nam sed augue et risus pretium porta a ut quam. Fusce vel tincidunt quam. Aenean lobortis pulvinar dui in tincidunt. Praesent non turpis sed arcu molestie eleifend sed id odio.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis, enim in condimentum ullamcorper, mauris justo suscipit ipsum, ut facilisis lacus felis sit amet purus. Sed at eros dolor. Donec gravida diam non finibus lacinia. Aliquam vitae tempor felis. Fusce sed urna eu risus vestibulum pharetra non at eros. Suspendisse lobortis risus ac felis pulvinar facilisis. Nam sed augue et risus pretium porta a ut quam. Fusce vel tincidunt quam. Aenean lobortis pulvinar dui in tincidunt. Praesent non turpis sed arcu molestie eleifend sed id odio.",
+            "description": "@cv.txt",
             "images": [
-                {
-                    "src": "https://raw.githubusercontent.com/Kethas/cv/main/screenshot.png"
-                },
                 {
                     "src": "https://raw.githubusercontent.com/Kethas/cv/main/screenshot.png"
                 }
@@ -29,84 +26,14 @@
             "title": "Moinkroft",
             "description": "A Minecraft clone made with Rust + WGPU.",
             "images": [],
-            "status": "Wip",
+            "status": "Stable",
             "links": []
         },
         {
             "title": "Moinkroft",
             "description": "A Minecraft clone made with Rust + WGPU.",
             "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Wip",
+            "status": "Working",
             "links": []
         },
         {

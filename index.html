@@ -35,10 +35,15 @@
                     for (let entry of entries) {
                         if (entry.isIntersecting) {
                             let proj = entry.target.children[0];
-                            proj.classList.add("fly-in");
+
+                            if (entry.target.id === "animation-corrector") return;
+
+                            if (!proj.classList.contains("fly-in")) {
+                                proj.classList.add("fly-in");
+                            }
 
                             let regex = /^project-([0-9]+)$/g;
-                            let id = regex.exec(proj.id)[1];
+                            let id = regex.exec(proj.getAttribute("data-id"))[1];
 
                             if (lastId) {
                                 let lastIndicatorId = "scroll-indicator-" + lastId;
@@ -61,7 +66,7 @@
                             lastId = id;
                         }
                     }
-                });
+                }, { threshold: 0.1 });
 
                 for (let proj of document.getElementsByClassName("project-container")) {
                     observer.observe(proj);

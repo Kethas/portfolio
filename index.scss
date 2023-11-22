@@ -238,7 +238,9 @@ canvas {
 
     scroll-snap-align: center;
 
-    padding: 10em 0;
+    padding: 0;
+    padding-top: 7.5rem;
+    padding-bottom: 15rem;
 }
 
 
@@ -252,7 +254,7 @@ canvas {
 
 @keyframes fly-in {
     from {
-        transform: translateX(100vw);
+        transform: translateX(99vw);
         opacity: 50%;
     }
     to {
@@ -277,7 +279,7 @@ canvas {
 
     width: 60%;
 
-    transform: translateX(100vw);
+    transform: translateX(99vw);
     opacity: 50%;
 
 
