@@ -36,8 +36,6 @@
                         if (entry.isIntersecting) {
                             let proj = entry.target.children[0];
 
-                            if (entry.target.id === "animation-corrector") return;
-
                             if (!proj.classList.contains("fade-in")) {
                                 proj.classList.add("fade-in");
                             }

@@ -46,12 +46,6 @@ impl Component for App {
             <>
                 <main id="main" class="flex-column">
                     {for projects}
-
-                    <div class="centered" style="scroll-snap-align: none;">
-                        <div id="animation-corrector" class="project-container">
-                            <div class="project-card" />
-                        </div>
-                    </div>
                 </main>
 
 
