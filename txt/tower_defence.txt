@@ -1,0 +1,5 @@
+This game (made in Unity and playable in the browser) 
+I made during high school for fun.
+It is not complete, but I just wanted to explore Unity and the 
+genre and I moved on when I was tired of it as I didn't have
+that much time to put into it.

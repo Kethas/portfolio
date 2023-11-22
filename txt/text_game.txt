@@ -1,0 +1,8 @@
+Originally, this was supposed to be a typing game for a 
+high school Computer Science class assignment, 
+kind of like a text-based 'Typing of the Dead', 
+however I pivoted towards a choose-your-own-adventure text game.
+
+While the content is not complete, the engine made in HTML, CSS, 
+and (mostly) JavaScript is complete, and the entire adventure is 
+a JS object containing all of the dialogue and choices.

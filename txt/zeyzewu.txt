@@ -1,0 +1,6 @@
+A suite of tools for use in developing my own Constructed (natural) Language. 
+It includes a library to be able to represent texts and words,
+a program/library that can draw texts in the writing system I invented for it,
+and a program that acts as an editable dictionary.
+
+All of these tools are made in Rust, using various different libraries.

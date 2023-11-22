@@ -1,8 +1,5 @@
-use std::path::PathBuf;
-
 use crate::portfolio::{self, *};
 use include_dir::{include_dir, Dir};
-use serde_json::from_str;
 use yew::{prelude::*, props};
 
 static TXT_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/txt");
@@ -118,14 +115,22 @@ fn project(props: &ProjectProps) -> Html {
     let description = if chars.next() == Some('@') {
         let path = chars.collect::<String>();
 
-        TXT_DIR
+        let txt = TXT_DIR
             .get_file(path)
             .map(|f| {
                 f.contents_utf8()
                     .unwrap_or("Could not read file.")
                     .to_owned()
             })
-            .unwrap_or("Could not read file.".to_owned())
+            .unwrap_or("Could not read file.".to_owned());
+
+        // markdown-style newlines + treat <br/> as a newline
+        txt.replace("\r\n\r\n", "<br/>")
+            .replace("\n\n", "<br/>")
+            .replace("\r\n", " ")
+            .replace('\n', " ")
+            .replace("<br/>", "\n")
+            .replace("  ", " ")
     } else {
         props.project.description.clone()
     };

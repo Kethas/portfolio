@@ -1,0 +1,6 @@
+A game made in Unity that I made during high school to learn about hexagonal grids. 
+The idea was to make a hexagonal chess, though I took a lot of creative liberty with 
+the ways the pieces can move, and so it became Hex Game instead of Hex Chess.
+
+You can play the game in your browser against an AI. 
+There is even a 'How to Play' section that shows the possible moves for any given piece.

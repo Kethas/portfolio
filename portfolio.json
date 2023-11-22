@@ -12,36 +12,144 @@
             "links": [
                 {
                     "href": "https://cv.asphyx.dev",
-                    "display": "cv.asphyx.dev",
+                    "display": "View CV",
                     "icon": "Chain"
                 },
                 {
                     "href": "https://github.com/Kethas/cv",
-                    "display": "Source Code",
+                    "display": "Source Code on GitHub",
                     "icon": "GitHub"
                 }
             ]
         },
         {
             "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Stable",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
-            "images": [],
-            "status": "Working",
-            "links": []
-        },
-        {
-            "title": "Moinkroft",
-            "description": "A Minecraft clone made with Rust + WGPU.",
+            "description": "@moinkroft.txt",
             "images": [],
             "status": "Wip",
             "links": []
+        },
+        {
+            "title": "Psi",
+            "description": "@psi.txt",
+            "images": [],
+            "status": "Working",
+            "links": [
+                {
+                    "href": "https://github.com/Kethas/psi",
+                    "display": "Source code on GitHub",
+                    "icon": "GitHub"
+                }
+            ]
+        },
+        {
+            "title": "RailsPlus",
+            "description": "@railsplus.txt",
+            "images": [
+                {
+                    "src": "img/railsplus-screenshot.png"
+                }
+            ],
+            "status": "Working",
+            "links": [
+                {
+                    "href": "https://www.curseforge.com/minecraft/mc-mods/railsplus",
+                    "display": "Mod page on Curseforge",
+                    "icon": "Chain"
+                },
+                {
+                    "href": "https://github.com/Kethas/railsplus",
+                    "display": "Source Code on GitHub",
+                    "icon": "GitHub"
+                }
+            ]
+        },
+        {
+            "title": "zẽyzẽwũ",
+            "description": "@zeyzewu.txt",
+            "images": [
+                {
+                    "src": "img/kyay-screenshot.png"
+                },
+                {
+                    "src": "img/dux-screenshot.png"
+                }
+            ],
+            "status": "Stable",
+            "links": [
+                {
+                    "href": "https://github.com/Kethas/zeyzewu",
+                    "display": "Source Code on GitHub",
+                    "icon": "GitHub"
+                }
+            ]
+        },
+        {
+            "title": "Hex Game",
+            "description": "@hex_game.txt",
+            "images": [
+                {
+                    "src": "img/hex-game-screenshot.png"
+                }
+            ],
+            "status": "Stable",
+            "links": [
+                {
+                    "href": "https://kethas.bitbucket.io/HexGame_WebGL/index.html",
+                    "display": "Play in browser",
+                    "icon": "Chain" 
+                }
+            ]
+
+        },
+        {
+            "title": "Text Game",
+            "description": "@text_game.txt",
+            "images": [
+                {
+                    "src": "img/text-game-screenshot.png"
+                }
+            ],
+            "status": "Stable",
+            "links": [
+                {
+                    "href": "https://kethas.bitbucket.io/text%20game/index.html",
+                    "display": "Play in browser",
+                    "icon": "Chain" 
+                }
+            ]
+
+        },
+        {
+            "title": "Tower Defence",
+            "description": "@tower_defence.txt",
+            "images": [
+                {
+                    "src": "img/tower-defence-screenshot.png"
+                }
+            ],
+            "status": "Stable",
+            "links": [
+                {
+                    "href": "https://kethas.bitbucket.io/tower%20defence/index.html",
+                    "display": "Play in browser",
+                    "icon": "Chain" 
+                }
+            ]
+
+        },
+        {
+            "title": "Portfolio",
+            "description": "@portfolio.txt",
+            "images": [],
+            "status": "Stable",
+            "links": [
+                {
+                    "href": "https://github.com/portfolio",
+                    "display": "Source Code on GitHub",
+                    "icon": "GitHub"
+                }
+            ]
         }
     ]
 }

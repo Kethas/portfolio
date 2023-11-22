@@ -1,0 +1,13 @@
+A Minecraft clone made with Rust + WGPU.
+
+This project is both a learning experience to learn 3D graphics,
+and something I have been wanting to create for a while.
+In my opinion, Minecraft is not very easy to mod and add complex 
+user generated content, and so I have always wanted to create my 
+own clone of it, with better support for modding and loading/unloading
+mods on-the-fly, as well as downloading the mods necessary to play on
+a server automatically.
+
+The project is currently undergoing reconstruction as the previous 
+engine I had built for it was not performant enough and would lag
+due to synchronization issues between multiple threads.

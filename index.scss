@@ -405,10 +405,11 @@ canvas {
         .link {
             display: inline-flex;
             gap: 0.1rem;
-            padding: 0.1rem;
-            border: 0.05rem solid black;
-            border-radius: 0.4rem;
+            padding: 0.5rem;
+            border: 0.08rem solid black;
+            border-radius: 0.7rem;
             margin: 0.2rem;
+            background-color: #57575749;
 
             img {
                 filter: contrast(1.5) invert(90%);
