@@ -252,19 +252,17 @@ canvas {
     width: 100vw;
 }
 
-@keyframes fly-in {
+@keyframes fade-in {
     from {
-        transform: translateX(99vw);
-        opacity: 50%;
+        opacity: 1%;
     }
     to {
-        transform: none;
         opacity: 100%;
     }
 }
 
-.fly-in {
-    animation: forwards ease-in-out 1s fly-in;
+.fade-in {
+    animation: forwards ease-in-out 1s fade-in;
 }
 
 .project-card {
@@ -279,8 +277,7 @@ canvas {
 
     width: 60%;
 
-    transform: translateX(99vw);
-    opacity: 50%;
+    opacity: 1%;
 
 
 
