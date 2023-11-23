@@ -1,2 +1,0 @@
-A responsive, animated webpage of my CV.
-Programmed in Rust, HTML, CSS, and JavaScript.

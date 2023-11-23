@@ -1,27 +1,6 @@
 {
     "projects": [
-        {
-            "title": "CV",
-            "description": "@cv.txt",
-            "images": [
-                {
-                    "src": "https://raw.githubusercontent.com/Kethas/cv/main/screenshot.png"
-                }
-            ],
-            "status": "Stable",
-            "links": [
-                {
-                    "href": "https://cv.asphyx.dev",
-                    "display": "View CV",
-                    "icon": "Chain"
-                },
-                {
-                    "href": "https://github.com/Kethas/cv",
-                    "display": "Source Code on GitHub",
-                    "icon": "GitHub"
-                }
-            ]
-        },
+       
         {
             "title": "Moinkroft",
             "description": "@moinkroft.txt",
@@ -139,14 +118,28 @@
 
         },
         {
-            "title": "Portfolio",
-            "description": "@portfolio.txt",
-            "images": [],
+            "title": "CV and Portfolio",
+            "description": "@cv_portfolio.txt",
+            "images": [
+                {
+                    "src": "https://raw.githubusercontent.com/Kethas/cv/main/screenshot.png"
+                }
+            ],
             "status": "Stable",
             "links": [
                 {
+                    "href": "https://cv.asphyx.dev",
+                    "display": "View CV",
+                    "icon": "Chain"
+                },
+                {
+                    "href": "https://github.com/Kethas/cv",
+                    "display": "CV Source Code on GitHub",
+                    "icon": "GitHub"
+                },
+                {
                     "href": "https://github.com/Kethas/portfolio",
-                    "display": "Source Code on GitHub",
+                    "display": "Portfolio Source Code on GitHub",
                     "icon": "GitHub"
                 }
             ]

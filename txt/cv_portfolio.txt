@@ -1,0 +1,15 @@
+My CV and this portfolio which accompanies it were both made with the Rust framework Yew, 
+which makes a static webpage with HTML, SCSS, JavaScript, and compiles the Rust code into WASM.
+Even though I wanted to avoid using JavaScript, for web this isn't very realistic.
+Passing closures from Rust to JavaScript is not very trivial and involves creating
+memory leaks on purpose. Instead I just added a script tag to the index.html files.
+This was mainly for IntersectionObservers, DOM events and the like.
+
+I made these webpages both as an exercise in frontend developement as well as a place to 
+showcase my skills and projects, both for potential employers (CV), and for my peers and
+any others who might be interested in what I do.
+
+
+
+The source code of both these pages is available at the links below, and my CV can be viewed
+in the browser via the link.
