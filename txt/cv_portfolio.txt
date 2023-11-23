@@ -9,7 +9,5 @@ I made these webpages both as an exercise in frontend developement as well as a 
 showcase my skills and projects, both for potential employers (CV), and for my peers and
 any others who might be interested in what I do.
 
-
-
 The source code of both these pages is available at the links below, and my CV can be viewed
 in the browser via the link.

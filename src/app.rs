@@ -125,11 +125,16 @@ fn project(props: &ProjectProps) -> Html {
             .unwrap_or("Could not read file.".to_owned());
 
         // markdown-style newlines + treat <br/> as a newline
-        txt.replace("\r\n\r\n", "<br/>")
-            .replace("\n\n", "<br/>")
+        txt
+            // replace 2 newlines with a 2 newlines
+            .replace("\r\n\r\n", "<br/><br/>")
+            .replace("\n\n", "<br/><br/>")
+            // replace 1 newline with a space
             .replace("\r\n", " ")
             .replace('\n', " ")
+            // replace <br/> with a real newline
             .replace("<br/>", "\n")
+            // replace any 2 spaces with 1 space
             .replace("  ", " ")
     } else {
         props.project.description.clone()

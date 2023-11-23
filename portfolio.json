@@ -1,48 +1,6 @@
 {
     "projects": [
-       
-        {
-            "title": "Moinkroft",
-            "description": "@moinkroft.txt",
-            "images": [],
-            "status": "Wip",
-            "links": []
-        },
-        {
-            "title": "Psi",
-            "description": "@psi.txt",
-            "images": [],
-            "status": "Working",
-            "links": [
-                {
-                    "href": "https://github.com/Kethas/psi",
-                    "display": "Source code on GitHub",
-                    "icon": "GitHub"
-                }
-            ]
-        },
-        {
-            "title": "RailsPlus",
-            "description": "@railsplus.txt",
-            "images": [
-                {
-                    "src": "img/railsplus-screenshot.png"
-                }
-            ],
-            "status": "Working",
-            "links": [
-                {
-                    "href": "https://www.curseforge.com/minecraft/mc-mods/railsplus",
-                    "display": "Mod page on Curseforge",
-                    "icon": "Chain"
-                },
-                {
-                    "href": "https://github.com/Kethas/railsplus",
-                    "display": "Source Code on GitHub",
-                    "icon": "GitHub"
-                }
-            ]
-        },
+
         {
             "title": "zẽyzẽwũ",
             "description": "@zeyzewu.txt",
@@ -143,6 +101,48 @@
                     "icon": "GitHub"
                 }
             ]
+        },
+        {
+            "title": "Psi",
+            "description": "@psi.txt",
+            "images": [],
+            "status": "Working",
+            "links": [
+                {
+                    "href": "https://github.com/Kethas/psi",
+                    "display": "Source code on GitHub",
+                    "icon": "GitHub"
+                }
+            ]
+        },
+        {
+            "title": "RailsPlus",
+            "description": "@railsplus.txt",
+            "images": [
+                {
+                    "src": "img/railsplus-screenshot.png"
+                }
+            ],
+            "status": "Working",
+            "links": [
+                {
+                    "href": "https://www.curseforge.com/minecraft/mc-mods/railsplus",
+                    "display": "Mod page on Curseforge",
+                    "icon": "Chain"
+                },
+                {
+                    "href": "https://github.com/Kethas/railsplus",
+                    "display": "Source Code on GitHub",
+                    "icon": "GitHub"
+                }
+            ]
+        },
+        {
+            "title": "Moinkroft",
+            "description": "@moinkroft.txt",
+            "images": [],
+            "status": "Wip",
+            "links": []
         }
     ]
 }
