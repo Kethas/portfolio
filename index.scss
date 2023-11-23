@@ -236,7 +236,11 @@ canvas {
     display: flex;
     justify-content: center;
 
-    scroll-snap-align: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    
+    scroll-padding-top: 10rem;
+    scroll-padding-bottom: 15rem;
 
     padding: 0;
     padding-top: 7.5rem;
@@ -303,25 +307,8 @@ canvas {
         display: inline-block;
         width: 0.4rem;
         height: 0.4rem;
-        background: #DD2233;  
-        border: 1px solid darken(#DD2233,5%);
-        border-radius: 50%;
-
-
-        font-size: 1.5rem;
-        margin-right: 0.2rem;
-        margin-bottom: calc($status-font-size / 2 - $indicator-size * 1.25);
-
-        color: #DD2233;
-        box-shadow: 0 0 1rem #DD2233;
-    }
-
-    .indicator.working {
-        display: inline-block;
-        width: 0.4rem;
-        height: 0.4rem;
         background: #DDAA11;  
-        border: 1px solid darken(#DDAA11,5%);
+        border: 0.1rem solid darken(#DDAA11,5%);
         border-radius: 50%;
 
 
@@ -333,12 +320,29 @@ canvas {
         box-shadow: 0 0 1rem #DDAA11;
     }
 
+    .indicator.working {
+        display: inline-block;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: transparent;  
+        border: 0.1rem solid darken(#33DD22,5%);
+        border-radius: 50%;
+
+
+        font-size: 1.5rem;
+        margin-right: 0.2rem;
+        margin-bottom: calc($status-font-size / 2 - $indicator-size * 1.25);
+
+        color: #33DD22;
+        box-shadow: 0 0 1rem #33DD22;
+    }
+
     .indicator.stable {
         display: inline-block;
         width: 0.4rem;
         height: 0.4rem;
         background: #33DD22;  
-        border: 1px solid darken(#33DD22,5%);
+        border: 0.1rem solid darken(#33DD22,5%);
         border-radius: 50%;
 
 
