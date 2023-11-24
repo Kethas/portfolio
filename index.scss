@@ -121,9 +121,9 @@ canvas {
     justify-content: center;
 
     .indicators {
-        background-color: #3737371F;
-        backdrop-filter: blur(10px);
-        border: 0.1rem solid #111;
+        background-color: #3737373F;
+        backdrop-filter: blur(20px);
+        border: 0.1rem solid #252525;
         border-radius: 1rem;
         box-shadow: 0 0 0.3rem black;
 
@@ -164,23 +164,23 @@ canvas {
             font-size: 1.5rem;
 
             color: #575757;
-            box-shadow: 0 0 0 #00ad68;
+            box-shadow: 0 0 0 #00ff99;
         }
 
         .scroll-indicator.on {
             display: inline-block;
             width: 0.4rem;
             height: 0.4rem;
-            background: #00ad68;  
-            border: 1px solid darken(#00ad68,5%);
+            background: #00ff99;  
+            border: 1px solid darken(#00ff99,5%);
             border-radius: 50%;
 
             text-align: center;
 
             font-size: 1.5rem;
 
-            color: #00ad68;
-            box-shadow: 0 0 1rem #00ad68;
+            color: #00ff99;
+            box-shadow: 0 0 1rem #00ff99;
         }
 
         .anim-on {
@@ -195,13 +195,13 @@ canvas {
                 color: #575757;
                 background: #575757;  
                 border: 1px solid darken(#575757,5%);
-                box-shadow: 0 0 0 #00ad68;
+                box-shadow: 0 0 0 #00ff99;
             }
             to {
-                color: #00ad68;
-                background: #00ad68;  
-                border: 1px solid darken(#00ad68,5%);
-                box-shadow: 0 0 1rem #00ad68;
+                color: #00ff99;
+                background: #00ff99;  
+                border: 1px solid darken(#00ff99,5%);
+                box-shadow: 0 0 1rem #00ff99;
             }
         }
 
