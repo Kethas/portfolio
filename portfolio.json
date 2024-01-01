@@ -1,6 +1,22 @@
 {
     "projects": [
-
+        {
+            "title": "Psi",
+            "description": "@psi.txt",
+            "images": [
+                {
+                    "src": "img/psi-carbon.svg"
+                }
+            ],
+            "status": "Stable",
+            "links": [
+                {
+                    "href": "https://github.com/Kethas/psi",
+                    "display": "Source code on GitHub",
+                    "icon": "GitHub"
+                }
+            ]
+        },
         {
             "title": "zẽyzẽwũ",
             "description": "@zeyzewu.txt",
@@ -34,10 +50,9 @@
                 {
                     "href": "https://kethas.bitbucket.io/HexGame_WebGL/index.html",
                     "display": "Play in browser",
-                    "icon": "Chain" 
+                    "icon": "Chain"
                 }
             ]
-
         },
         {
             "title": "Text Game",
@@ -52,10 +67,9 @@
                 {
                     "href": "https://kethas.bitbucket.io/text%20game/index.html",
                     "display": "Play in browser",
-                    "icon": "Chain" 
+                    "icon": "Chain"
                 }
             ]
-
         },
         {
             "title": "Tower Defence",
@@ -70,10 +84,9 @@
                 {
                     "href": "https://kethas.bitbucket.io/tower%20defence/index.html",
                     "display": "Play in browser",
-                    "icon": "Chain" 
+                    "icon": "Chain"
                 }
             ]
-
         },
         {
             "title": "CV and Portfolio",
@@ -98,19 +111,6 @@
                 {
                     "href": "https://github.com/Kethas/portfolio",
                     "display": "Portfolio Source Code on GitHub",
-                    "icon": "GitHub"
-                }
-            ]
-        },
-        {
-            "title": "Psi",
-            "description": "@psi.txt",
-            "images": [],
-            "status": "Working",
-            "links": [
-                {
-                    "href": "https://github.com/Kethas/psi",
-                    "display": "Source code on GitHub",
                     "icon": "GitHub"
                 }
             ]

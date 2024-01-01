@@ -2,6 +2,5 @@ A parser made in Rust that focuses on usability rather than speed.
 Unlike many LL or LR parsers, Psi doesn't compute a lookup table for its rules, but instead a tree structure.
 Technically speaking, Psi is an LL parser, though with a certain trick, left-recursion can be enabled.
 
-The thought behind the 'usability' factor of Psi is that there would be 
-a Rust macro exposed to create a parser Rule tree (grammar), 
-even going so far as to create a grammar to replace said macro.
+The thought behind the 'usability' factor of Psi is that there is 
+a Rust macro exposed to create a parser Rule tree (grammar).
